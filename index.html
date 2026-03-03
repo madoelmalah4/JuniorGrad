@@ -132,6 +132,12 @@
       font-weight: 600;
       color: black;
     }
+    .absent-value {
+      text-align: center;
+      font-weight: 600;
+      color: #e74c3c;
+      font-style: italic;
+    }
     .total-row {
       background: #e8f0fe;
       font-weight: bold;
@@ -1257,7 +1263,7 @@
     "التربية الدينية": 8.79,
     "التربية الوطنية": 8.57
   }
-];
+]
 
     const nationalIdInput = document.getElementById('nationalIdInput');
     const searchButton = document.getElementById('searchButton');
@@ -1284,6 +1290,19 @@
       }
     }
 
+    function formatGrade(grade) {
+      if (grade === "غائب") {
+        return '<span class="absent-value">غائب</span>';
+      } else if (typeof grade === 'number') {
+        return grade.toFixed(2);
+      }
+      return grade;
+    }
+
+    function getGradeClass(grade) {
+      return grade === "غائب" ? 'absent-value' : 'grade-value';
+    }
+
     function displayStudentInfo(student) {
       studentName.textContent = student['اسم الطالب كاملا'];
       studentNationalId.textContent = student['الرقم القومي'];
@@ -1299,9 +1318,12 @@
 
       subjects.forEach(subject => {
         const row = document.createElement('tr');
+        const gradeClass = getGradeClass(subject.grade);
+        const gradeDisplay = formatGrade(subject.grade);
+        
         row.innerHTML = `
           <td class="subject-name">${subject.name}</td>
-          <td class="grade-value">${subject.grade.toFixed(2)}</td>
+          <td class="${gradeClass}">${gradeDisplay}</td>
           <td class="grade-value">${subject.max}</td>
         `;
         gradesTableBody.appendChild(row);
@@ -1310,18 +1332,28 @@
       // Total row (الدرجة الكلية)
       const totalRow = document.createElement('tr');
       totalRow.className = 'total-row';
+      
+      let totalDisplay = student['الدرجة الكلية'];
+      if (student['الدرجة الكلية'] === 0 && student['اللغة العربية'] === "غائب") {
+        totalDisplay = '<span class="absent-value">غائب</span>';
+      } else if (typeof student['الدرجة الكلية'] === 'number') {
+        totalDisplay = student['الدرجة الكلية'].toFixed(2);
+      }
+      
       totalRow.innerHTML = `
         <td class="subject-name">Total Score</td>
-        <td class="grade-value">${student['الدرجة الكلية'].toFixed(2)}</td>
+        <td class="${student['الدرجة الكلية'] === 0 && student['اللغة العربية'] === "غائب" ? 'absent-value' : 'grade-value'}">${totalDisplay}</td>
         <td class="grade-value">95</td>
       `;
       gradesTableBody.appendChild(totalRow);
 
       // Religious education
       const religionRow = document.createElement('tr');
+      const religionClass = getGradeClass(student['التربية الدينية']);
+      const religionDisplay = formatGrade(student['التربية الدينية']);
       religionRow.innerHTML = `
         <td class="subject-name">Religion</td>
-        <td class="grade-value">${student['التربية الدينية'].toFixed(2)}</td>
+        <td class="${religionClass}">${religionDisplay}</td>
         <td class="grade-value">10</td>
       `;
       gradesTableBody.appendChild(religionRow);
@@ -1329,9 +1361,11 @@
       // National education (citizenship)
       const nationalRow = document.createElement('tr');
       nationalRow.className = 'national-row';
+      const nationalClass = getGradeClass(student['التربية الوطنية']);
+      const nationalDisplay = formatGrade(student['التربية الوطنية']);
       nationalRow.innerHTML = `
         <td class="subject-name">Citizinship</td>
-        <td class="grade-value">${student['التربية الوطنية'].toFixed(2)}</td>
+        <td class="${nationalClass}">${nationalDisplay}</td>
         <td class="grade-value">10</td>
       `;
       gradesTableBody.appendChild(nationalRow);
