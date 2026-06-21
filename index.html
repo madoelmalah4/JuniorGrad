@@ -272,7 +272,6 @@
     </div>
 
     <script>
-        // Injected JSON data matching your newest camelCase nested schema
         const students = [
                     {
                         "seatNumber": 1001,
@@ -2072,7 +2071,7 @@
             // Sanitize input properties string metrics
             const cleanGrade = (rawGrade !== null && rawGrade !== undefined) ? String(rawGrade).trim() : null;
 
-            // 1. Absolute Empty Value Check
+            // 1. Check explicitly for empty properties indicating absence
             if (cleanGrade === null || cleanGrade === '') {
                 gradeCell.textContent = "غ";
                 isFail = true;
@@ -2130,39 +2129,52 @@
             gradesTableBody.innerHTML = "";
             gradesTableFooter.innerHTML = "";
 
-            // 1. Core Totalled System subjects mappings using nested student.marks layout
+            // 1. Core Totalled System subjects mappings using nested student.marks layout (Sums to 190)
             const coreSubjects = [
                 { key: "arabic", label: "Arabic (اللغة العربية)", max: 50 },
-                { key: "english", label: "English Advanced (اللغة الإنجليزية الآلي)", max: 50 },
-                { key: "pureMathematics", label: "Pure Mathematics (رياضيات بحتة)", max: 30 },
-                { key: "mechanics", label: "Mechanics (ميكانيكا)", max: 20 },
-                { key: "physics", label: "Physics Advanced (الفيزياء الآلي)", max: 40 },
-                { key: "socialStudies", label: "Social Studies (الدراسات الاجتماعية)", max: 20 },
-                { key: "capstone", label: "Capstone Project (مشروع الكابستون)", max: 100 } // Added capstone row assignment
+                { key: "english", label: "English Advanced (اللغة الإنجليزية)", max: 50 },
+                { key: "pureMathematics", label: "Pure Mathematics (رياضيات بحتة)", max: 50 },
+                { key: "physics", label: "Physics Advanced (الفيزياء)", max: 40 }
             ];
 
             let coreMaxTotal = 0;
             coreSubjects.forEach(subject => {
-                coreMaxTotal += subject.max;
-                // Safely grab from the student.marks dictionary structure if available
-                const gradeValue = (student.marks && student.marks.hasOwnProperty(subject.key)) ? student.marks[subject.key] : null;
+                let gradeValue = null;
+
+                if (student.marks) {
+                    if (student.marks.hasOwnProperty(subject.key)) {
+                        gradeValue = student.marks[subject.key];
+                        coreMaxTotal += subject.max;
+                    } else {
+                        gradeValue = "-";
+                    }
+                }
+
                 const row = createRow(subject.label, gradeValue, subject.max);
                 gradesTableBody.appendChild(row);
             });
 
-            // 2. Main Cumulative Summary Total Row Element
+            // 2. Main Cumulative Summary Total Row Element (Will display out of 190)
             const totalRow = createRow("Total (المجموع)", student.total, coreMaxTotal, "total-row");
             gradesTableFooter.appendChild(totalRow);
 
             // 3. Out-Of-Total System Competency items blocks additions
             const extraSubjects = [
+                { key: "capstone", label: "Capstone Project (مشروع الكابستون)", max: 100 },
                 { key: "specializedStudy", label: "Competencies (الجدارات)", max: "-" },
-                { key: "religiousEducation", label: "Religious (التربية الدينية)", max: 20 },
+                { key: "religiousEducation", label: "Religion (التربية الدينية)", max: 20 },
                 { key: "nationalEducation", label: "Citizenship (التربية الوطنية)", max: 20 }
             ];
 
             extraSubjects.forEach(subject => {
-                const gradeValue = (student.marks && student.marks.hasOwnProperty(subject.key)) ? student.marks[subject.key] : null;
+                let gradeValue = null;
+                if (student.marks) {
+                    if (student.marks.hasOwnProperty(subject.key)) {
+                        gradeValue = student.marks[subject.key];
+                    } else {
+                        gradeValue = "-";
+                    }
+                }
                 const row = createRow(subject.label, gradeValue, subject.max, "out-of-total-row");
                 gradesTableFooter.appendChild(row);
             });
