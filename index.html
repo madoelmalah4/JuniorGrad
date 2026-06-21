@@ -23,7 +23,7 @@
 
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: white;
             border-radius: 10px;
@@ -113,6 +113,8 @@
             font-size: 1.5rem;
             color: #2c5aa0;
             margin-bottom: 5px;
+            text-align: right;
+            direction: rtl;
         }
 
         .student-meta {
@@ -218,7 +220,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>نتيجة نهاية العام الدراسي (Juniors) 2025/2026</h1>
+            <h1>نتيجة نهاية العام الدراسي 2025/2026</h1>
             <p class="subtitle">Search for your grades using your National ID</p>
         </header>
 
@@ -270,1579 +272,1748 @@
     </div>
 
     <script>
-        // Injected JSON data
+        // Injected JSON data matching your newest camelCase nested schema
         const students = [
-         {
-                "seatNumber": 1066,
-                "nationalId": "31006140600527",
-                "fullName": "ردينه محمد عيسي عباس محمد",
-                "marks": {
-                    "arabic": 49.88,
-                    "english": 49.27,
-                    "pureMathematics": 50,
-                    "physics": 39.8,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 19.51,
-                    "nationalEducation": 18.77
-                },
-                "total": 188.95,
-                "percentage": 99.44,
-                "rank": "الاول",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1079,
-                "nationalId": "31004072100569",
-                "fullName": "ملك محمد احمد حسانين عثمان",
-                "marks": {
-                    "arabic": 47.28,
-                    "english": 48.53,
-                    "pureMathematics": 50,
-                    "physics": 39.42,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.35,
-                    "nationalEducation": 18.47
-                },
-                "total": 185.23,
-                "percentage": 97.48,
-                "rank": "الثاني",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1050,
-                "nationalId": "30910210500457",
-                "fullName": "يوسف محمد محمد سليم بركات",
-                "marks": {
-                    "arabic": 48.97,
-                    "english": 46.53,
-                    "pureMathematics": 50,
-                    "physics": 39.12,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.53,
-                    "nationalEducation": 16.09
-                },
-                "total": 184.62,
-                "percentage": 97.16,
-                "rank": "الثالث",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1057,
-                "nationalId": "31008130600823",
-                "fullName": "تسنيم ناصر السيد محمد شحاته",
-                "marks": {
-                    "arabic": 47.71,
-                    "english": 47.27,
-                    "pureMathematics": 49.13,
-                    "physics": 38.92,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.21,
-                    "nationalEducation": 18
-                },
-                "total": 183.03,
-                "percentage": 96.33,
-                "rank": "الرابع",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1032,
-                "nationalId": "30912190102835",
-                "fullName": "محمد سعيد عبدالمنعم عباس ابراهيم",
-                "marks": {
-                    "arabic": 47.67,
-                    "english": 44.9,
-                    "pureMathematics": 48.3,
-                    "physics": 37.84,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 19.15,
-                    "nationalEducation": 17.8
-                },
-                "total": 178.71,
-                "percentage": 94.05,
-                "rank": "الخامس",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1052,
-                "nationalId": "31006230600186",
-                "fullName": "اروي ايمن احمد حماد علي",
-                "marks": {
-                    "arabic": 47.51,
-                    "english": 45.14,
-                    "pureMathematics": 47.38,
-                    "physics": 38.5,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.41,
-                    "nationalEducation": 18.06
-                },
-                "total": 178.53,
-                "percentage": 93.96,
-                "rank": "السادس",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1024,
-                "nationalId": "31010200101891",
-                "fullName": "عبدالله عمرو عبدالله محمود ايوب",
-                "marks": {
-                    "arabic": 46.34,
-                    "english": 47.01,
-                    "pureMathematics": 47.18,
-                    "physics": 37.63,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.9,
-                    "nationalEducation": 16.64
-                },
-                "total": 178.16,
-                "percentage": 93.76,
-                "rank": "السابع",
-                "rankNote": "مكرر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1063,
-                "nationalId": "31002222101841",
-                "fullName": "حلا احمد محمد صابر",
-                "marks": {
-                    "arabic": 48.42,
-                    "english": 47.52,
-                    "pureMathematics": 45.15,
-                    "physics": 37.07,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.6,
-                    "nationalEducation": 17.59
-                },
-                "total": 178.16,
-                "percentage": 93.76,
-                "rank": "السابع",
-                "rankNote": "مكرر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1082,
-                "nationalId": "31001190601441",
-                "fullName": "منه ياسر محمد عبد السلام",
-                "marks": {
-                    "arabic": 45.12,
-                    "english": 45.77,
-                    "pureMathematics": 47.48,
-                    "physics": 38.3,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.29,
-                    "nationalEducation": 15.42
-                },
-                "total": 176.67,
-                "percentage": 92.98,
-                "rank": "التاسع",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1046,
-                "nationalId": "30902142501838",
-                "fullName": "يوثام سمير نسيم بولس عبد السيد",
-                "marks": {
-                    "arabic": 47.74,
-                    "english": 45.4,
-                    "pureMathematics": 45.5,
-                    "physics": 36.6,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.83,
-                    "nationalEducation": 18.25
-                },
-                "total": 175.24,
-                "percentage": 92.23,
-                "rank": "العاشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1064,
-                "nationalId": "30910040101528",
-                "fullName": "خديجه خالد احمد فرغلي احمد",
-                "marks": {
-                    "arabic": 45.88,
-                    "english": 43.78,
-                    "pureMathematics": 47.63,
-                    "physics": 37.62,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.62,
-                    "nationalEducation": 15.06
-                },
-                "total": 174.91,
-                "percentage": 92.05,
-                "rank": "الحادي عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1086,
-                "nationalId": "31003032302782",
-                "fullName": "هدير عادل رمضان محمود متولي",
-                "marks": {
-                    "arabic": 47.44,
-                    "english": 44.14,
-                    "pureMathematics": 44.93,
-                    "physics": 37.56,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.39,
-                    "nationalEducation": 15.67
-                },
-                "total": 174.07,
-                "percentage": 91.61,
-                "rank": "الثاني عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1069,
-                "nationalId": "31008150100266",
-                "fullName": "روان ناجي عبدالرحمن محمد الصعيدي",
-                "marks": {
-                    "arabic": 45.55,
-                    "english": 44.77,
-                    "pureMathematics": 46.55,
-                    "physics": 37.18,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.02,
-                    "nationalEducation": 18.04
-                },
-                "total": 174.05,
-                "percentage": 91.6,
-                "rank": "الثالث عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1048,
-                "nationalId": "30901011205536",
-                "fullName": "يوسف ايمن نعيم تادرس يوسف",
-                "marks": {
-                    "arabic": 41.38,
-                    "english": 47.02,
-                    "pureMathematics": 46.78,
-                    "physics": 37.76,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.83,
-                    "nationalEducation": 17.33
-                },
-                "total": 172.94,
-                "percentage": 91.02,
-                "rank": "الرابع عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1001,
-                "nationalId": "30912172102992",
-                "fullName": "احمد السعيد السيد طه سرحان",
-                "marks": {
-                    "arabic": 44.47,
-                    "english": 45.52,
-                    "pureMathematics": 44.33,
-                    "physics": 37.12,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.75,
-                    "nationalEducation": 15.99
-                },
-                "total": 171.44,
-                "percentage": 90.23,
-                "rank": "الخامس عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1074,
-                "nationalId": "30904300101527",
-                "fullName": "فاطمة هشام كمال الدين موسي ابراهيم",
-                "marks": {
-                    "arabic": 44.87,
-                    "english": 48.4,
-                    "pureMathematics": 39.73,
-                    "physics": 37.76,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.58,
-                    "nationalEducation": 17.64
-                },
-                "total": 170.76,
-                "percentage": 89.87,
-                "rank": "السادس عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1036,
-                "nationalId": "31009280101872",
-                "fullName": "مشاري عبدالحميد شحاته عبدالناصر جمعه",
-                "marks": {
-                    "arabic": 46.82,
-                    "english": 48.77,
-                    "pureMathematics": 40.08,
-                    "physics": 34.74,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.26,
-                    "nationalEducation": 15.68
-                },
-                "total": 170.41,
-                "percentage": 89.68,
-                "rank": "السابع عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1060,
-                "nationalId": "31001040601621",
-                "fullName": "جومانه احمد محمد سيد رمضان",
-                "marks": {
-                    "arabic": 45.93,
-                    "english": 48.39,
-                    "pureMathematics": 42.98,
-                    "physics": 32.93,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.66,
-                    "nationalEducation": 15.67
-                },
-                "total": 170.23,
-                "percentage": 89.59,
-                "rank": "الثامن عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1056,
-                "nationalId": "31003160103245",
-                "fullName": "بسنت احمد عبد المنعم عبد الواحد جنيدي",
-                "marks": {
-                    "arabic": 44.21,
-                    "english": 41.14,
-                    "pureMathematics": 46.65,
-                    "physics": 35.18,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.61,
-                    "nationalEducation": 17.65
-                },
-                "total": 167.18,
-                "percentage": 87.98,
-                "rank": "التاسع عشر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1054,
-                "nationalId": "31012042101024",
-                "fullName": "امل سيد توفيق ميرغني احمد",
-                "marks": {
-                    "arabic": 45.36,
-                    "english": 40.89,
-                    "pureMathematics": 47.6,
-                    "physics": 32.29,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.8,
-                    "nationalEducation": 15.37
-                },
-                "total": 166.14,
-                "percentage": 87.44,
-                "rank": "العشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1005,
-                "nationalId": "30911192102836",
-                "fullName": "احمد محمد احمد الصادق محمد زكي",
-                "marks": {
-                    "arabic": 43.22,
-                    "english": 44.65,
-                    "pureMathematics": 41.23,
-                    "physics": 36.78,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.7,
-                    "nationalEducation": 17.12
-                },
-                "total": 165.88,
-                "percentage": 87.3,
-                "rank": "الحادي والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1061,
-                "nationalId": "31003262101964",
-                "fullName": "حبيبه احمد محمد محمد عبيد",
-                "marks": {
-                    "arabic": 44.7,
-                    "english": 40.15,
-                    "pureMathematics": 45.28,
-                    "physics": 35.46,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.99,
-                    "nationalEducation": 17.54
-                },
-                "total": 165.59,
-                "percentage": 87.15,
-                "rank": "الثاني والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1013,
-                "nationalId": "31009060105672",
-                "fullName": "اياد مصطفي ابراهيم محمود عبدالله",
-                "marks": {
-                    "arabic": 42.06,
-                    "english": 41.03,
-                    "pureMathematics": 45.65,
-                    "physics": 36.47,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 13.14,
-                    "nationalEducation": 12.99
-                },
-                "total": 165.21,
-                "percentage": 86.95,
-                "rank": "الثالث والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1077,
-                "nationalId": "31004162100401",
-                "fullName": "ملك احمد عبدالعزيز عبدالفتاح عنايه",
-                "marks": {
-                    "arabic": 47,
-                    "english": 45.89,
-                    "pureMathematics": 37.43,
-                    "physics": 34.86,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.19,
-                    "nationalEducation": 16.1
-                },
-                "total": 165.18,
-                "percentage": 86.93,
-                "rank": "الرابع والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1076,
-                "nationalId": "31009160300464",
-                "fullName": "كرمه احمد ممدوح عبدالفتاح عثمان جبر",
-                "marks": {
-                    "arabic": 44.32,
-                    "english": 45.39,
-                    "pureMathematics": 43.95,
-                    "physics": 31.31,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16,
-                    "nationalEducation": 16.49
-                },
-                "total": 164.97,
-                "percentage": 86.82,
-                "rank": "الخامس والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1073,
-                "nationalId": "31006141303186",
-                "fullName": "سما احمد فايز احمد مهدي الكردي",
-                "marks": {
-                    "arabic": 47.11,
-                    "english": 40.64,
-                    "pureMathematics": 40.15,
-                    "physics": 35.35,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.07,
-                    "nationalEducation": 16.48
-                },
-                "total": 163.25,
-                "percentage": 85.92,
-                "rank": "السادس والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1027,
-                "nationalId": "31005180103376",
-                "fullName": "عمر محمد محمود محمد عطا",
-                "marks": {
-                    "arabic": 45.88,
-                    "english": 46.14,
-                    "pureMathematics": 37.8,
-                    "physics": 33.06,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.25,
-                    "nationalEducation": 14.55
-                },
-                "total": 162.88,
-                "percentage": 85.72,
-                "rank": "السابع والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1031,
-                "nationalId": "30911152303413",
-                "fullName": "محمد احمد احمد حسين عبدالخالق",
-                "marks": {
-                    "arabic": 46.86,
-                    "english": 41.14,
-                    "pureMathematics": 41.35,
-                    "physics": 32.42,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.4,
-                    "nationalEducation": 13.67
-                },
-                "total": 161.77,
-                "percentage": 85.14,
-                "rank": "الثامن والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1002,
-                "nationalId": "31003031704399",
-                "fullName": "احمد السيد محمد احمد عثمان",
-                "marks": {
-                    "arabic": 47.44,
-                    "english": 40.76,
-                    "pureMathematics": 38.3,
-                    "physics": 34.01,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.19,
-                    "nationalEducation": 17.77
-                },
-                "total": 160.51,
-                "percentage": 84.47,
-                "rank": "التاسع والعشرين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1053,
-                "nationalId": "31006062104429",
-                "fullName": "الاء هريدي سيد محمد السيد",
-                "marks": {
-                    "arabic": 44.52,
-                    "english": 40.76,
-                    "pureMathematics": 43.71,
-                    "physics": 31.22,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.92,
-                    "nationalEducation": 15.19
-                },
-                "total": 160.21,
-                "percentage": 84.32,
-                "rank": "الثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1075,
-                "nationalId": "30907090200747",
-                "fullName": "فريده مصطفى حسين احمد عبدالله",
-                "marks": {
-                    "arabic": 39.45,
-                    "english": 42.15,
-                    "pureMathematics": 43.95,
-                    "physics": 34.49,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.65,
-                    "nationalEducation": 18.01
-                },
-                "total": 160.04,
-                "percentage": 84.23,
-                "rank": "الحادي والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1039,
-                "nationalId": "30905151900434",
-                "fullName": "معاذ محمد مصطفي كمال محمد جعيصه",
-                "marks": {
-                    "arabic": 38.18,
-                    "english": 44.27,
-                    "pureMathematics": 41.53,
-                    "physics": 34.97,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.58,
-                    "nationalEducation": 16.44
-                },
-                "total": 158.95,
-                "percentage": 83.65,
-                "rank": "الثاني والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1017,
-                "nationalId": "31009280600755",
-                "fullName": "حمزة محمد عبدالمطلب مصيلحي محمد حسن",
-                "marks": {
-                    "arabic": 43.7,
-                    "english": 41.14,
-                    "pureMathematics": 42.53,
-                    "physics": 31.04,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.57,
-                    "nationalEducation": 16.8
-                },
-                "total": 158.41,
-                "percentage": 83.37,
-                "rank": "الثالث والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1021,
-                "nationalId": "31009040105374",
-                "fullName": "عبدالرحمن محمد حامد السيد المليجي",
-                "marks": {
-                    "arabic": 43.09,
-                    "english": 45.27,
-                    "pureMathematics": 41.18,
-                    "physics": 28.3,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.62,
-                    "nationalEducation": 14.67
-                },
-                "total": 157.84,
-                "percentage": 83.07,
-                "rank": "الرابع والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1044,
-                "nationalId": "31010012210616",
-                "fullName": "ياسين عبدالله فتحي عبدالله",
-                "marks": {
-                    "arabic": 45.1,
-                    "english": 39.77,
-                    "pureMathematics": 43.33,
-                    "physics": 27.96,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.05,
-                    "nationalEducation": 16.08
-                },
-                "total": 156.16,
-                "percentage": 82.18,
-                "rank": "الخامس والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1080,
-                "nationalId": "31008122101184",
-                "fullName": "ملك محمد السيد محمود",
-                "marks": {
-                    "arabic": 45.06,
-                    "english": 41.77,
-                    "pureMathematics": 39.53,
-                    "physics": 29.41,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.11,
-                    "nationalEducation": 13.67
-                },
-                "total": 155.77,
-                "percentage": 81.98,
-                "rank": "السادس والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1059,
-                "nationalId": "31001300102462",
-                "fullName": "جني احمد عفيفي محمد ابراهيم",
-                "marks": {
-                    "arabic": 41.97,
-                    "english": 37.76,
-                    "pureMathematics": 40.68,
-                    "physics": 33.96,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.49,
-                    "nationalEducation": 15.77
-                },
-                "total": 154.37,
-                "percentage": 81.24,
-                "rank": "السابع والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1007,
-                "nationalId": "30910082101293",
-                "fullName": "آسر على احمد محمد على",
-                "marks": {
-                    "arabic": 43.74,
-                    "english": 42.39,
-                    "pureMathematics": 35.68,
-                    "physics": 32.4,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.86,
-                    "nationalEducation": 15.62
-                },
-                "total": 154.21,
-                "percentage": 81.16,
-                "rank": "الثامن والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1067,
-                "nationalId": "31006210106126",
-                "fullName": "رضوي صابر بطايحي عبدالحليم",
-                "marks": {
-                    "arabic": 43.28,
-                    "english": 39.77,
-                    "pureMathematics": 36.58,
-                    "physics": 34.48,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.54,
-                    "nationalEducation": 17.05
-                },
-                "total": 154.11,
-                "percentage": 81.11,
-                "rank": "التاسع والثلاثين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1051,
-                "nationalId": "31010102106656",
-                "fullName": "يوسف هيثم يوسف احمد الشاعر",
-                "marks": {
-                    "arabic": 39.79,
-                    "english": 47.13,
-                    "pureMathematics": 35.2,
-                    "physics": 31.6,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 12.96,
-                    "nationalEducation": 13.39
-                },
-                "total": 153.72,
-                "percentage": 80.9,
-                "rank": "الاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1087,
-                "nationalId": "31006150600606",
-                "fullName": "يارا وليد درويش محمد سيد جاد",
-                "marks": {
-                    "arabic": 42.51,
-                    "english": 40.52,
-                    "pureMathematics": 36.98,
-                    "physics": 33.53,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.1,
-                    "nationalEducation": 17.34
-                },
-                "total": 153.54,
-                "percentage": 80.81,
-                "rank": "الحادي والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1025,
-                "nationalId": "30903282201431",
-                "fullName": "عمر علي عمر هجرس",
-                "marks": {
-                    "arabic": 43.17,
-                    "english": 45.4,
-                    "pureMathematics": 33.81,
-                    "physics": 31.04,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.51,
-                    "nationalEducation": 14.17
-                },
-                "total": 153.42,
-                "percentage": 80.74,
-                "rank": "الثاني والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1009,
-                "nationalId": "31009232403131",
-                "fullName": "الفولي يحيي فولي حسن",
-                "marks": {
-                    "arabic": 46.34,
-                    "english": 40.64,
-                    "pureMathematics": 35.88,
-                    "physics": 29.7,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.85,
-                    "nationalEducation": 16.45
-                },
-                "total": 152.56,
-                "percentage": 80.29,
-                "rank": "الثالث والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1041,
-                "nationalId": "31010011414498",
-                "fullName": "مهاب محمد هليل سنوسي مدكور",
-                "marks": {
-                    "arabic": 44.04,
-                    "english": 35.27,
-                    "pureMathematics": 40.88,
-                    "physics": 32.34,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.42,
-                    "nationalEducation": 14.92
-                },
-                "total": 152.53,
-                "percentage": 80.27,
-                "rank": "الرابع والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1043,
-                "nationalId": "30903280104056",
-                "fullName": "ياسين خالد احمد عبداللطيف ثابت",
-                "marks": {
-                    "arabic": 37.99,
-                    "english": 46.51,
-                    "pureMathematics": 31.35,
-                    "physics": 36.4,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.15,
-                    "nationalEducation": 17.06
-                },
-                "total": 152.25,
-                "percentage": 80.13,
-                "rank": "الخامس والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1029,
-                "nationalId": "31101022100695",
-                "fullName": "مالك جميل السيد حسين عبد الشافي",
-                "marks": {
-                    "arabic": 44.47,
-                    "english": 40.4,
-                    "pureMathematics": 37.03,
-                    "physics": 29.28,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 12.07,
-                    "nationalEducation": 11.41
-                },
-                "total": 151.18,
-                "percentage": 79.56,
-                "rank": "السادس والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1004,
-                "nationalId": "31001101700539",
-                "fullName": "احمد محجوب شعبان محمد القصاص",
-                "marks": {
-                    "arabic": 45.44,
-                    "english": 39.39,
-                    "pureMathematics": 39.7,
-                    "physics": 25.88,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.1,
-                    "nationalEducation": 16.26
-                },
-                "total": 150.41,
-                "percentage": 79.16,
-                "rank": "السابع والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1078,
-                "nationalId": "31001141402565",
-                "fullName": "ملك عبده محمد عبده عبدالرحمن",
-                "marks": {
-                    "arabic": 40.91,
-                    "english": 36.52,
-                    "pureMathematics": 42.68,
-                    "physics": 28.86,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.29,
-                    "nationalEducation": 13.14
-                },
-                "total": 148.97,
-                "percentage": 78.4,
-                "rank": "الثامن والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1012,
-                "nationalId": "31009292104532",
-                "fullName": "اياد علي جمعه شعبان علي",
-                "marks": {
-                    "arabic": 40.89,
-                    "english": 31.4,
-                    "pureMathematics": 43.43,
-                    "physics": 33.15,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.27,
-                    "nationalEducation": 15.7
-                },
-                "total": 148.87,
-                "percentage": 78.35,
-                "rank": "التاسع والاربعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1019,
-                "nationalId": "31006272102674",
-                "fullName": "عبدالرحمن علي عيد هاشم علي",
-                "marks": {
-                    "arabic": 39.96,
-                    "english": 37.64,
-                    "pureMathematics": 38.05,
-                    "physics": 31.92,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.06,
-                    "nationalEducation": 13.91
-                },
-                "total": 147.57,
-                "percentage": 77.66,
-                "rank": "الخمسين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1083,
-                "nationalId": "31103060105741",
-                "fullName": "ميار ناصر جمال شحاته مصطفى",
-                "marks": {
-                    "arabic": 41.05,
-                    "english": 41.5,
-                    "pureMathematics": 39.08,
-                    "physics": 25.88,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.88,
-                    "nationalEducation": 15.42
-                },
-                "total": 147.51,
-                "percentage": 77.63,
-                "rank": "الحادي والخمسين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1047,
-                "nationalId": "30901251404552",
-                "fullName": "يوسف احمد فتحي عبدالقادر",
-                "marks": {
-                    "arabic": 36.99,
-                    "english": 46.77,
-                    "pureMathematics": 31.83,
-                    "physics": 29.67,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 13.14,
-                    "nationalEducation": 13.44
-                },
-                "total": 145.26,
-                "percentage": 76.45,
-                "rank": "الثاني والخمسين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1035,
-                "nationalId": "30905190101271",
-                "fullName": "مروان حسين جمال حسين",
-                "marks": {
-                    "arabic": 42.63,
-                    "english": 43.4,
-                    "pureMathematics": 33.7,
-                    "physics": 25.21,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 15.28,
-                    "nationalEducation": 14.48
-                },
-                "total": 144.94,
-                "percentage": 76.28,
-                "rank": "الثالث والخمسين",
-                "result": "دور ثان: ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1023,
-                "nationalId": "31005012800398",
-                "fullName": "عبدالعزيز حسن محمد يعقوب عبدالسيد",
-                "marks": {
-                    "arabic": 40.99,
-                    "english": 41.64,
-                    "pureMathematics": 31.48,
-                    "physics": 30.77,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 19.16,
-                    "nationalEducation": 17.42
-                },
-                "total": 144.88,
-                "percentage": 76.25,
-                "rank": "الرابع والخمسين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1070,
-                "nationalId": "30905252103209",
-                "fullName": "رؤي وائل علي محمود محمد",
-                "marks": {
-                    "arabic": 42.04,
-                    "english": 42.65,
-                    "pureMathematics": 31.9,
-                    "physics": 28.27,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 16.94,
-                    "nationalEducation": 17.88
-                },
-                "total": 144.86,
-                "percentage": 76.24,
-                "rank": "الخامس والخمسين",
-                "result": "دور ثان: ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1065,
-                "nationalId": "31006081403402",
-                "fullName": "رحمه محمود محمد عبدالقادر احمد لاشين",
-                "marks": {
-                    "arabic": 46.23,
-                    "english": 41.02,
-                    "pureMathematics": 34.43,
-                    "physics": 22.98,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.21,
-                    "nationalEducation": 14.49
-                },
-                "total": 144.66,
-                "percentage": 76.13,
-                "rank": "السادس والخمسين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1008,
-                "nationalId": "30909011705971",
-                "fullName": "اسلام منصور عبدالحليم برين",
-                "marks": {
-                    "arabic": 43.16,
-                    "english": 44.76,
-                    "pureMathematics": 30.26,
-                    "physics": 26.41,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.22,
-                    "nationalEducation": 15.97
-                },
-                "total": 144.59,
-                "percentage": 76.1,
-                "rank": "السابع والخمسين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1038,
-                "nationalId": "31006050105594",
-                "fullName": "مصطفي محمود مصطفي عبدالجواد مصطفي",
-                "marks": {
-                    "arabic": 39.93,
-                    "english": 37.64,
-                    "pureMathematics": 38.18,
-                    "physics": 28.84,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.81,
-                    "nationalEducation": 18.1
-                },
-                "total": 144.59,
-                "percentage": 76.1,
-                "rank": "السابع والخمسين",
-                "rankNote": "مكرر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1055,
-                "nationalId": "31008182102848",
-                "fullName": "ايتن وهبه محمد وهبه محمد خليل",
-                "marks": {
-                    "arabic": 42.74,
-                    "english": 35.89,
-                    "pureMathematics": 37.5,
-                    "physics": 27.68,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.68,
-                    "nationalEducation": 17.34
-                },
-                "total": 143.81,
-                "percentage": 75.68,
-                "rank": "التاسع والخمسين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1018,
-                "nationalId": "31008180201253",
-                "fullName": "رافائيل نادي فهيم سدراك غطاس",
-                "marks": {
-                    "arabic": 39.88,
-                    "english": 41.76,
-                    "pureMathematics": 32.28,
-                    "physics": 27.14,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.33,
-                    "nationalEducation": 12.48
-                },
-                "total": 141.06,
-                "percentage": 74.24,
-                "rank": "الستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1030,
-                "nationalId": "31009262100532",
-                "fullName": "مجدي عبدالغفار محمد عبدالغفار عرفه زيدان",
-                "marks": {
-                    "arabic": 42.31,
-                    "english": 27.02,
-                    "pureMathematics": 43.63,
-                    "physics": 27.06,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 13.26,
-                    "nationalEducation": 16.66
-                },
-                "total": 140.02,
-                "percentage": 73.69,
-                "rank": "الحادي والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1049,
-                "nationalId": "30812238801477",
-                "fullName": "يوسف عبد الهادى قبيصى محمد",
-                "marks": {
-                    "arabic": 35.34,
-                    "english": 34.51,
-                    "pureMathematics": 37,
-                    "physics": 32.42,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.99,
-                    "nationalEducation": 12.93
-                },
-                "total": 139.27,
-                "percentage": 73.3,
-                "rank": "الثاني والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1040,
-                "nationalId": "30812022104836",
-                "fullName": "معتصم محمد يسري سعدي داوي القاضي",
-                "marks": {
-                    "arabic": 39.02,
-                    "english": 42.01,
-                    "pureMathematics": 31.53,
-                    "physics": 26.25,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 11.76,
-                    "nationalEducation": 14.94
-                },
-                "total": 138.81,
-                "percentage": 73.05,
-                "rank": "الثالث والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1022,
-                "nationalId": "30811102103311",
-                "fullName": "عبدالرحمن ناصر مصطفي عبدالرحمن مبروك",
-                "marks": {
-                    "arabic": 36.16,
-                    "english": 45.65,
-                    "pureMathematics": 28.16,
-                    "physics": 28.47,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 13.47,
-                    "nationalEducation": 15.44
-                },
-                "total": 138.44,
-                "percentage": 72.86,
-                "rank": "الرابع والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1085,
-                "nationalId": "31010010604021",
-                "fullName": "هدي عزت غازي السيد عوض سلامه",
-                "marks": {
-                    "arabic": 41.98,
-                    "english": 31.02,
-                    "pureMathematics": 36.1,
-                    "physics": 29.34,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 18.36,
-                    "nationalEducation": 16.69
-                },
-                "total": 138.44,
-                "percentage": 72.86,
-                "rank": "الرابع والستين",
-                "rankNote": "مكرر",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1026,
-                "nationalId": "31010240602311",
-                "fullName": "عمر محمد كمال محمد مصطفي",
-                "marks": {
-                    "arabic": 41.07,
-                    "english": 34.51,
-                    "pureMathematics": 36.45,
-                    "physics": 25.6,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.36,
-                    "nationalEducation": 15.51
-                },
-                "total": 137.63,
-                "percentage": 72.43,
-                "rank": "السادس والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1037,
-                "nationalId": "31005120601318",
-                "fullName": "مصطفي الحسين محمد دسوقي حميده",
-                "marks": {
-                    "arabic": 43.06,
-                    "english": 33.39,
-                    "pureMathematics": 36.26,
-                    "physics": 24.19,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.35,
-                    "nationalEducation": 16.33
-                },
-                "total": 136.9,
-                "percentage": 72.05,
-                "rank": "السابع والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1034,
-                "nationalId": "31003092100151",
-                "fullName": "محمد محمود سعيد غريب ابراهيم",
-                "marks": {
-                    "arabic": 43.36,
-                    "english": 35.02,
-                    "pureMathematics": 33.2,
-                    "physics": 24.06,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.49,
-                    "nationalEducation": 15.27
-                },
-                "total": 135.64,
-                "percentage": 71.38,
-                "rank": "الثامن والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1084,
-                "nationalId": "30912211402044",
-                "fullName": "هاجر سعيد حامد محمود حنك",
-                "marks": {
-                    "arabic": 41.28,
-                    "english": 34.26,
-                    "pureMathematics": 32.23,
-                    "physics": 27,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 17.39,
-                    "nationalEducation": 14.62
-                },
-                "total": 134.77,
-                "percentage": 70.93,
-                "rank": "التاسع والستين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1042,
-                "nationalId": "31007120600233",
-                "fullName": "مهند صبري فوزي محمد الطنبشاوي",
-                "marks": {
-                    "arabic": 44.08,
-                    "english": 38.52,
-                    "pureMathematics": 30.08,
-                    "physics": 21.8,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.66,
-                    "nationalEducation": 15.14
-                },
-                "total": 134.48,
-                "percentage": 70.77,
-                "rank": "السبعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1028,
-                "nationalId": "31009292102378",
-                "fullName": "فخرالدين ابراهيم نادي ابراهيم احمد",
-                "marks": {
-                    "arabic": 37.39,
-                    "english": 30.89,
-                    "pureMathematics": 38.15,
-                    "physics": 27.58,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.56,
-                    "nationalEducation": 14.82
-                },
-                "total": 134.01,
-                "percentage": 70.53,
-                "rank": "الواحد والسبعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1003,
-                "nationalId": "31006012604951",
-                "fullName": "احمد حماده محمد احمد",
-                "marks": {
-                    "arabic": 39.01,
-                    "english": 33.64,
-                    "pureMathematics": 33.58,
-                    "physics": 26.26,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.98,
-                    "nationalEducation": 16.88
-                },
-                "total": 132.49,
-                "percentage": 69.73,
-                "rank": "الثاني والسبعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1081,
-                "nationalId": "31009300107503",
-                "fullName": "منه محمد صلاح فهمي شريف",
-                "marks": {
-                    "arabic": 44.62,
-                    "english": 27.77,
-                    "pureMathematics": 37.3,
-                    "physics": 22.23,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 14.98,
-                    "nationalEducation": 15.67
-                },
-                "total": 131.92,
-                "percentage": 69.43,
-                "rank": "الثالث والسبعين",
-                "result": "دور ثان: ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1016,
-                "nationalId": "30908280600179",
-                "fullName": "حسام اشرف المصري سليمان المصري",
-                "marks": {
-                    "arabic": 37.2,
-                    "english": 35.89,
-                    "pureMathematics": 32.78,
-                    "physics": 25.19,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 14.69,
-                    "nationalEducation": 13.45
-                },
-                "total": 131.06,
-                "percentage": 68.97,
-                "rank": "الرابع والسبعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1010,
-                "nationalId": "31009210500753",
-                "fullName": "المعتزبالله باسم ممدوح سيد عفيفي",
-                "marks": {
-                    "arabic": 41.28,
-                    "english": 38.89,
-                    "pureMathematics": 28.88,
-                    "physics": 21.41,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 16.2,
-                    "nationalEducation": 13.81
-                },
-                "total": 130.46,
-                "percentage": 68.66,
-                "rank": "الخامس والسبعين",
-                "result": "دور ثان: ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1072,
-                "nationalId": "30906262100948",
-                "fullName": "سلمي تامر سامي حسن محمد",
-                "marks": {
-                    "arabic": 40.1,
-                    "english": 34.26,
-                    "pureMathematics": 27.95,
-                    "physics": 26.78,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 14.4,
-                    "nationalEducation": 14.17
-                },
-                "total": 129.09,
-                "percentage": 67.94,
-                "rank": "السادس والسبعين",
-                "result": "دور ثان: ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1045,
-                "nationalId": "31007260106875",
-                "fullName": "يس محمد ثروت محمود توفيق",
-                "marks": {
-                    "arabic": 41.25,
-                    "english": 33.15,
-                    "pureMathematics": 29.5,
-                    "physics": 22.01,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 13.21,
-                    "nationalEducation": 14.86
-                },
-                "total": 125.91,
-                "percentage": 66.26,
-                "rank": "السابع والسبعين",
-                "result": "دور ثان: ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1068,
-                "nationalId": "31009260105448",
-                "fullName": "رنا حسين علي احمد",
-                "marks": {
-                    "arabic": 41.28,
-                    "english": 26.39,
-                    "pureMathematics": 35.88,
-                    "physics": 22.28,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.44,
-                    "nationalEducation": 13.64
-                },
-                "total": 125.83,
-                "percentage": 66.22,
-                "rank": "الثامن والسبعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1020,
-                "nationalId": "30905122102677",
-                "fullName": "عبدالرحمن عمادالدين مجدي محمود ماضى",
-                "marks": {
-                    "arabic": 36.75,
-                    "english": 42.27,
-                    "pureMathematics": 25.25,
-                    "physics": 20.24,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.3,
-                    "nationalEducation": 14.09
-                },
-                "total": 124.51,
-                "percentage": 65.53,
-                "rank": "التاسع والسبعين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1011,
-                "nationalId": "31004201201296",
-                "fullName": "انس رمضان ابراهيم عبد الحميد تقي الدين",
-                "marks": {
-                    "arabic": 39.95,
-                    "english": 31.89,
-                    "pureMathematics": 27.68,
-                    "physics": 21.11,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 11.93,
-                    "nationalEducation": 13.39
-                },
-                "total": 120.63,
-                "percentage": 63.48,
-                "rank": "الثمانين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1062,
-                "nationalId": "31006220106027",
-                "fullName": "حبيبه محسن سيد طه دومه",
-                "marks": {
-                    "arabic": 40.19,
-                    "english": 29.38,
-                    "pureMathematics": 29.68,
-                    "physics": 21.33,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.06,
-                    "nationalEducation": 17.7
-                },
-                "total": 120.58,
-                "percentage": 63.46,
-                "rank": "الحادي والثمانين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1015,
-                "nationalId": "31007040600631",
-                "fullName": "تيم الله احمد عمر محمد عبدالعزبز كامل",
-                "marks": {
-                    "arabic": 35.48,
-                    "english": 41.02,
-                    "pureMathematics": 20.93,
-                    "physics": 20.94,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 17.12,
-                    "nationalEducation": 13.28
-                },
-                "total": 118.37,
-                "percentage": 62.3,
-                "rank": "الثاني والثمانين",
-                "result": "دور ثان: Pure Mathematics-ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1033,
-                "nationalId": "31008300102432",
-                "fullName": "محمد سيد مصطفي فرحات ابراهيم",
-                "marks": {
-                    "arabic": 37.52,
-                    "english": 25.64,
-                    "pureMathematics": 30.95,
-                    "physics": 21.12,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 16.03,
-                    "nationalEducation": 15.21
-                },
-                "total": 115.23,
-                "percentage": 60.64,
-                "rank": "الثالث والثمانين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1006,
-                "nationalId": "31002102103697",
-                "fullName": "ادم عماد محمد عدلى",
-                "marks": {
-                    "arabic": 32.13,
-                    "english": 37.27,
-                    "pureMathematics": 23.1,
-                    "physics": 20.77,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 11.42,
-                    "nationalEducation": 10.12
-                },
-                "total": 113.27,
-                "percentage": 59.61,
-                "rank": "الرابع والثمانين",
-                "result": "دور ثان: Pure Mathematics-ECU-SD-4-05-"
-            },
-            {
-                "seatNumber": 1014,
-                "nationalId": "31004121402096",
-                "fullName": "بيشوي جورجيوس عريان شكري خليل",
-                "marks": {
-                    "arabic": 34.06,
-                    "english": 25.77,
-                    "pureMathematics": 26.6,
-                    "physics": 20.24,
-                    "specializedStudy": "جدير",
-                    "religiousEducation": 15.97,
-                    "nationalEducation": 14.27
-                },
-                "total": 106.67,
-                "percentage": 56.14,
-                "rank": "الخامس والثمانين",
-                "result": "ناجح ومنقول"
-            },
-            {
-                "seatNumber": 1058,
-                "nationalId": "31009142102442",
-                "fullName": "جني احمد اسماعيل حسين احمد",
-                "marks": {
-                    "arabic": 40.05,
-                    "english": 24.51,
-                    "pureMathematics": 22.91,
-                    "physics": 5.51,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": 13.36,
-                    "nationalEducation": 12.69
-                },
-                "total": 92.98,
-                "percentage": 48.93,
-                "rank": "السادس والثمانين",
-                "result": "راسب وباق"
-            },
-            {
-                "seatNumber": 1071,
-                "nationalId": "31010012105162",
-                "fullName": "ساره محمد نصر عبدالله احمد",
-                "marks": {
-                    "arabic": null,
-                    "english": null,
-                    "pureMathematics": null,
-                    "physics": null,
-                    "specializedStudy": "غير جدير",
-                    "religiousEducation": null,
-                    "nationalEducation": null
-                },
-                "total": 0,
-                "percentage": 0,
-                "rank": "السابع والثمانين",
-                "result": "راسب وباق",
-                "isAbsent": true
-            }
+                    {
+                        "seatNumber": 1001,
+                        "nationalId": "30912172102992",
+                        "fullName": "احمد السعيد السيد طه سرحان",
+                        "marks": {
+                            "arabic": 44.47,
+                            "english": 45.52,
+                            "pureMathematics": 44.33,
+                            "physics": 37.12,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.75,
+                            "nationalEducation": 15.99,
+                            "capstone": 74
+                        },
+                        "total": 171.44,
+                        "percentage": 90.23,
+                        "rank": "الخامس عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1002,
+                        "nationalId": "31003031704399",
+                        "fullName": "احمد السيد محمد احمد عثمان",
+                        "marks": {
+                            "arabic": 47.44,
+                            "english": 40.76,
+                            "pureMathematics": 38.3,
+                            "physics": 34.01,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.19,
+                            "nationalEducation": 17.77,
+                            "capstone": 71.3
+                        },
+                        "total": 160.51,
+                        "percentage": 84.47,
+                        "rank": "التاسع والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1003,
+                        "nationalId": "31006012604951",
+                        "fullName": "احمد حماده محمد احمد",
+                        "marks": {
+                            "arabic": 39.01,
+                            "english": 33.64,
+                            "pureMathematics": 33.58,
+                            "physics": 26.26,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.98,
+                            "nationalEducation": 16.88,
+                            "capstone": 86.3
+                        },
+                        "total": 132.49,
+                        "percentage": 69.73,
+                        "rank": "الثاني والسبعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1004,
+                        "nationalId": "31001101700539",
+                        "fullName": "احمد محجوب شعبان محمد القصاص",
+                        "marks": {
+                            "arabic": 45.44,
+                            "english": 39.39,
+                            "pureMathematics": 39.7,
+                            "physics": 25.88,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.1,
+                            "nationalEducation": 16.26,
+                            "capstone": 82.5
+                        },
+                        "total": 150.41,
+                        "percentage": 79.16,
+                        "rank": "السابع والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1005,
+                        "nationalId": "30911192102836",
+                        "fullName": "احمد محمد احمد الصادق محمد زكي",
+                        "marks": {
+                            "arabic": 43.22,
+                            "english": 44.65,
+                            "pureMathematics": 41.23,
+                            "physics": 36.78,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.7,
+                            "nationalEducation": 17.12,
+                            "capstone": 79.3
+                        },
+                        "total": 165.88,
+                        "percentage": 87.30,
+                        "rank": "الحادي والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1006,
+                        "nationalId": "31002102103697",
+                        "fullName": "ادم عماد محمد عدلى",
+                        "marks": {
+                            "arabic": 32.13,
+                            "english": 37.27,
+                            "pureMathematics": 23.1,
+                            "physics": 20.77,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 11.42,
+                            "nationalEducation": 10.12,
+                            "capstone": 93.5
+                        },
+                        "total": 113.27,
+                        "percentage": 59.61,
+                        "rank": "الرابع والثمانين",
+                        "result": "دور ثان: Pure Mathematics-ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1007,
+                        "nationalId": "30910082101293",
+                        "fullName": "آسر على احمد محمد على",
+                        "marks": {
+                            "arabic": 43.74,
+                            "english": 42.39,
+                            "pureMathematics": 35.68,
+                            "physics": 32.4,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.86,
+                            "nationalEducation": 15.62,
+                            "capstone": 85.8
+                        },
+                        "total": 154.21,
+                        "percentage": 81.16,
+                        "rank": "الثامن والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1008,
+                        "nationalId": "30909011705971",
+                        "fullName": "اسلام منصور عبدالحليم برين",
+                        "marks": {
+                            "arabic": 43.16,
+                            "english": 44.76,
+                            "pureMathematics": 30.26,
+                            "physics": 26.41,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.22,
+                            "nationalEducation": 15.97,
+                            "capstone": 82.5
+                        },
+                        "total": 144.59,
+                        "percentage": 76.10,
+                        "rank": "السابع والخمسين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1009,
+                        "nationalId": "31009232403131",
+                        "fullName": "الفولي يحيي فولي حسن",
+                        "marks": {
+                            "arabic": 46.34,
+                            "english": 40.64,
+                            "pureMathematics": 35.88,
+                            "physics": 29.7,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.85,
+                            "nationalEducation": 16.45,
+                            "capstone": 86.3
+                        },
+                        "total": 152.56,
+                        "percentage": 80.29,
+                        "rank": "الثالث والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1010,
+                        "nationalId": "31009210500753",
+                        "fullName": "المعتزبالله باسم ممدوح سيد عفيفي",
+                        "marks": {
+                            "arabic": 41.28,
+                            "english": 38.89,
+                            "pureMathematics": 28.88,
+                            "physics": 21.41,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 16.2,
+                            "nationalEducation": 13.81,
+                            "capstone": 58.5
+                        },
+                        "total": 130.46,
+                        "percentage": 68.66,
+                        "rank": "الخامس والسبعين",
+                        "result": "دور ثان: ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1011,
+                        "nationalId": "31004201201296",
+                        "fullName": "انس رمضان ابراهيم عبد الحميد تقي الدين",
+                        "marks": {
+                            "arabic": 39.95,
+                            "english": 31.89,
+                            "pureMathematics": 27.68,
+                            "physics": 21.11,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 11.93,
+                            "nationalEducation": 13.39,
+                            "capstone": 71.3
+                        },
+                        "total": 120.63,
+                        "percentage": 63.48,
+                        "rank": "الثمانين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1012,
+                        "nationalId": "31009292104532",
+                        "fullName": "اياد علي جمعه شعبان علي",
+                        "marks": {
+                            "arabic": 40.89,
+                            "english": 31.4,
+                            "pureMathematics": 43.43,
+                            "physics": 33.15,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.27,
+                            "nationalEducation": 15.7,
+                            "capstone": 88.3
+                        },
+                        "total": 148.87,
+                        "percentage": 78.35,
+                        "rank": "التاسع والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1013,
+                        "nationalId": "31009060105672",
+                        "fullName": "اياد مصطفي ابراهيم محمود عبدالله",
+                        "marks": {
+                            "arabic": 42.06,
+                            "english": 41.03,
+                            "pureMathematics": 45.65,
+                            "physics": 36.47,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 13.14,
+                            "nationalEducation": 12.99,
+                            "capstone": 79
+                        },
+                        "total": 165.21,
+                        "percentage": 86.95,
+                        "rank": "الثالث والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1014,
+                        "nationalId": "31004121402096",
+                        "fullName": "بيشوي جورجيوس عريان شكري خليل",
+                        "marks": {
+                            "arabic": 34.06,
+                            "english": 25.77,
+                            "pureMathematics": 26.6,
+                            "physics": 20.24,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.97,
+                            "nationalEducation": 14.27,
+                            "capstone": 64.75
+                        },
+                        "total": 106.67,
+                        "percentage": 56.14,
+                        "rank": "الخامس والثمانين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1015,
+                        "nationalId": "31007040600631",
+                        "fullName": "تيم الله احمد عمر محمد عبدالعزبز كامل",
+                        "marks": {
+                            "arabic": 35.48,
+                            "english": 41.02,
+                            "pureMathematics": 20.93,
+                            "physics": 20.94,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 17.12,
+                            "nationalEducation": 13.28,
+                            "capstone": 93.5
+                        },
+                        "total": 118.37,
+                        "percentage": 62.30,
+                        "rank": "الثاني والثمانين",
+                        "result": "دور ثان: Pure Mathematics-ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1016,
+                        "nationalId": "30908280600179",
+                        "fullName": "حسام اشرف المصري سليمان المصري",
+                        "marks": {
+                            "arabic": 37.2,
+                            "english": 35.89,
+                            "pureMathematics": 32.78,
+                            "physics": 25.19,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.69,
+                            "nationalEducation": 13.45,
+                            "capstone": 85.8
+                        },
+                        "total": 131.06,
+                        "percentage": 68.97,
+                        "rank": "الرابع والسبعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1017,
+                        "nationalId": "31009280600755",
+                        "fullName": "حمزة محمد عبدالمطلب مصيلحي محمد حسن",
+                        "marks": {
+                            "arabic": 43.7,
+                            "english": 41.14,
+                            "pureMathematics": 42.53,
+                            "physics": 31.04,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.57,
+                            "nationalEducation": 16.8,
+                            "capstone": 79
+                        },
+                        "total": 158.41,
+                        "percentage": 83.37,
+                        "rank": "الثالث والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1018,
+                        "nationalId": "31008180201253",
+                        "fullName": "رافائيل نادي فهيم سدراك غطاس",
+                        "marks": {
+                            "arabic": 39.88,
+                            "english": 41.76,
+                            "pureMathematics": 32.28,
+                            "physics": 27.14,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.33,
+                            "nationalEducation": 12.48,
+                            "capstone": 58.5
+                        },
+                        "total": 141.06,
+                        "percentage": 74.24,
+                        "rank": "الستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1019,
+                        "nationalId": "31006272102674",
+                        "fullName": "عبدالرحمن علي عيد هاشم علي",
+                        "marks": {
+                            "arabic": 39.96,
+                            "english": 37.64,
+                            "pureMathematics": 38.05,
+                            "physics": 31.92,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.06,
+                            "nationalEducation": 13.91,
+                            "capstone": 82
+                        },
+                        "total": 147.57,
+                        "percentage": 77.66,
+                        "rank": "الخمسين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1020,
+                        "nationalId": "30905122102677",
+                        "fullName": "عبدالرحمن عمادالدين مجدي محمود ماضى",
+                        "marks": {
+                            "arabic": 36.75,
+                            "english": 42.27,
+                            "pureMathematics": 25.25,
+                            "physics": 20.24,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.3,
+                            "nationalEducation": 14.09,
+                            "capstone": 88.3
+                        },
+                        "total": 124.51,
+                        "percentage": 65.53,
+                        "rank": "التاسع والسبعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1021,
+                        "nationalId": "31009040105374",
+                        "fullName": "عبدالرحمن محمد حامد السيد المليجي",
+                        "marks": {
+                            "arabic": 43.09,
+                            "english": 45.27,
+                            "pureMathematics": 41.18,
+                            "physics": 28.3,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.62,
+                            "nationalEducation": 14.67,
+                            "capstone": 75.3
+                        },
+                        "total": 157.84,
+                        "percentage": 83.07,
+                        "rank": "الرابع والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1022,
+                        "nationalId": "30811102103311",
+                        "fullName": "عبدالرحمن ناصر مصطفي عبدالرحمن مبروك",
+                        "marks": {
+                            "arabic": 36.16,
+                            "english": 45.65,
+                            "pureMathematics": 28.16,
+                            "physics": 28.47,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 13.47,
+                            "nationalEducation": 15.44,
+                            "capstone": 79.3
+                        },
+                        "total": 138.44,
+                        "percentage": 72.86,
+                        "rank": "الرابع والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1023,
+                        "nationalId": "31005012800398",
+                        "fullName": "عبدالعزيز حسن محمد يعقوب عبدالسيد",
+                        "marks": {
+                            "arabic": 40.99,
+                            "english": 41.64,
+                            "pureMathematics": 31.48,
+                            "physics": 30.77,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 19.16,
+                            "nationalEducation": 17.42,
+                            "capstone": 71.3
+                        },
+                        "total": 144.88,
+                        "percentage": 76.25,
+                        "rank": "الرابع والخمسين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1024,
+                        "nationalId": "31010200101891",
+                        "fullName": "عبدالله عمرو عبدالله محمود ايوب",
+                        "marks": {
+                            "arabic": 46.34,
+                            "english": 47.01,
+                            "pureMathematics": 47.18,
+                            "physics": 37.63,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.9,
+                            "nationalEducation": 16.64,
+                            "capstone": 82
+                        },
+                        "total": 178.16,
+                        "percentage": 93.76,
+                        "rank": "السابع",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1025,
+                        "nationalId": "30903282201431",
+                        "fullName": "عمر علي عمر هجرس",
+                        "marks": {
+                            "arabic": 43.17,
+                            "english": 45.4,
+                            "pureMathematics": 33.81,
+                            "physics": 31.04,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.51,
+                            "nationalEducation": 14.17,
+                            "capstone": 90
+                        },
+                        "total": 153.42,
+                        "percentage": 80.74,
+                        "rank": "الثاني والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1026,
+                        "nationalId": "31010240602311",
+                        "fullName": "عمر محمد كمال محمد مصطفي",
+                        "marks": {
+                            "arabic": 41.07,
+                            "english": 34.51,
+                            "pureMathematics": 36.45,
+                            "physics": 25.6,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.36,
+                            "nationalEducation": 15.51,
+                            "capstone": 79
+                        },
+                        "total": 137.63,
+                        "percentage": 72.43,
+                        "rank": "السادس والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1027,
+                        "nationalId": "31005180103376",
+                        "fullName": "عمر محمد محمود محمد عطا",
+                        "marks": {
+                            "arabic": 45.88,
+                            "english": 46.14,
+                            "pureMathematics": 37.8,
+                            "physics": 33.06,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.25,
+                            "nationalEducation": 14.55,
+                            "capstone": 79
+                        },
+                        "total": 162.88,
+                        "percentage": 85.72,
+                        "rank": "السابع والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1028,
+                        "nationalId": "31009292102378",
+                        "fullName": "فخرالدين ابراهيم نادي ابراهيم احمد",
+                        "marks": {
+                            "arabic": 37.39,
+                            "english": 30.89,
+                            "pureMathematics": 38.15,
+                            "physics": 27.58,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.56,
+                            "nationalEducation": 14.82,
+                            "capstone": 82
+                        },
+                        "total": 134.01,
+                        "percentage": 70.53,
+                        "rank": "الواحد والسبعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1029,
+                        "nationalId": "31101022100695",
+                        "fullName": "مالك جميل السيد حسين عبد الشافي",
+                        "marks": {
+                            "arabic": 44.47,
+                            "english": 40.4,
+                            "pureMathematics": 37.03,
+                            "physics": 29.28,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 12.07,
+                            "nationalEducation": 11.41,
+                            "capstone": 93.5
+                        },
+                        "total": 151.18,
+                        "percentage": 79.56,
+                        "rank": "السادس والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1030,
+                        "nationalId": "31009262100532",
+                        "fullName": "مجدي عبدالغفار محمد عبدالغفار عرفه زيدان",
+                        "marks": {
+                            "arabic": 42.31,
+                            "english": 27.02,
+                            "pureMathematics": 43.63,
+                            "physics": 27.06,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 13.26,
+                            "nationalEducation": 16.66,
+                            "capstone": 58.5
+                        },
+                        "total": 140.02,
+                        "percentage": 73.69,
+                        "rank": "الحادي والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1031,
+                        "nationalId": "30911152303413",
+                        "fullName": "محمد احمد احمد حسين عبدالخالق",
+                        "marks": {
+                            "arabic": 46.86,
+                            "english": 41.14,
+                            "pureMathematics": 41.35,
+                            "physics": 32.42,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.4,
+                            "nationalEducation": 13.67,
+                            "capstone": 86.3
+                        },
+                        "total": 161.77,
+                        "percentage": 85.14,
+                        "rank": "الثامن والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1032,
+                        "nationalId": "30912190102835",
+                        "fullName": "محمد سعيد عبدالمنعم عباس ابراهيم",
+                        "marks": {
+                            "arabic": 47.67,
+                            "english": 44.9,
+                            "pureMathematics": 48.3,
+                            "physics": 37.84,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 19.15,
+                            "nationalEducation": 17.8,
+                            "capstone": 87
+                        },
+                        "total": 178.71,
+                        "percentage": 94.05,
+                        "rank": "الخامس",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1033,
+                        "nationalId": "31008300102432",
+                        "fullName": "محمد سيد مصطفي فرحات ابراهيم",
+                        "marks": {
+                            "arabic": 37.52,
+                            "english": 25.64,
+                            "pureMathematics": 30.95,
+                            "physics": 21.12,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.03,
+                            "nationalEducation": 15.21,
+                            "capstone": 75.3
+                        },
+                        "total": 115.23,
+                        "percentage": 60.64,
+                        "rank": "الثالث والثمانين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1034,
+                        "nationalId": "31003092100151",
+                        "fullName": "محمد محمود سعيد غريب ابراهيم",
+                        "marks": {
+                            "arabic": 43.36,
+                            "english": 35.02,
+                            "pureMathematics": 33.2,
+                            "physics": 24.06,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.49,
+                            "nationalEducation": 15.27,
+                            "capstone": 87
+                        },
+                        "total": 135.64,
+                        "percentage": 71.38,
+                        "rank": "الثامن والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1035,
+                        "nationalId": "30905190101271",
+                        "fullName": "مروان حسين جمال حسين",
+                        "marks": {
+                            "arabic": 42.63,
+                            "english": 43.4,
+                            "pureMathematics": 33.7,
+                            "physics": 25.21,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 15.28,
+                            "nationalEducation": 14.48,
+                            "capstone": 56.5
+                        },
+                        "total": 144.94,
+                        "percentage": 76.28,
+                        "rank": "الثالث والخمسين",
+                        "result": "دور ثان: ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1036,
+                        "nationalId": "31009280101872",
+                        "fullName": "مشاري عبدالحميد شحاته عبدالناصر جمعه",
+                        "marks": {
+                            "arabic": 46.82,
+                            "english": 48.77,
+                            "pureMathematics": 40.08,
+                            "physics": 34.74,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.26,
+                            "nationalEducation": 15.68,
+                            "capstone": 87
+                        },
+                        "total": 170.41,
+                        "percentage": 89.68,
+                        "rank": "السابع عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1037,
+                        "nationalId": "31005120601318",
+                        "fullName": "مصطفي الحسين محمد دسوقي حميده",
+                        "marks": {
+                            "arabic": 43.06,
+                            "english": 33.39,
+                            "pureMathematics": 36.26,
+                            "physics": 24.19,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.35,
+                            "nationalEducation": 16.33,
+                            "capstone": 75.3
+                        },
+                        "total": 136.9,
+                        "percentage": 72.05,
+                        "rank": "السابع والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1038,
+                        "nationalId": "31006050105594",
+                        "fullName": "مصطفي محمود مصطفي عبدالجواد مصطفي",
+                        "marks": {
+                            "arabic": 39.93,
+                            "english": 37.64,
+                            "pureMathematics": 38.18,
+                            "physics": 28.84,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.81,
+                            "nationalEducation": 18.1,
+                            "capstone": 70
+                        },
+                        "total": 144.59,
+                        "percentage": 76.10,
+                        "rank": "السابع والخمسين مكرر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1039,
+                        "nationalId": "30905151900434",
+                        "fullName": "معاذ محمد مصطفي كمال محمد جعيصه",
+                        "marks": {
+                            "arabic": 38.18,
+                            "english": 44.27,
+                            "pureMathematics": 41.53,
+                            "physics": 34.97,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.58,
+                            "nationalEducation": 16.44,
+                            "capstone": 90
+                        },
+                        "total": 158.95,
+                        "percentage": 83.65,
+                        "rank": "الثاني والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1040,
+                        "nationalId": "30812022104836",
+                        "fullName": "معتصم محمد يسري سعدي داوي القاضي",
+                        "marks": {
+                            "arabic": 39.02,
+                            "english": 42.01,
+                            "pureMathematics": 31.53,
+                            "physics": 26.25,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 11.76,
+                            "nationalEducation": 14.94,
+                            "capstone": 56.5
+                        },
+                        "total": 138.81,
+                        "percentage": 73.05,
+                        "rank": "الثالث والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1041,
+                        "nationalId": "31010011414498",
+                        "fullName": "مهاب محمد هليل سنوسي مدكور",
+                        "marks": {
+                            "arabic": 44.04,
+                            "english": 35.27,
+                            "pureMathematics": 40.88,
+                            "physics": 32.34,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.42,
+                            "nationalEducation": 14.92,
+                            "capstone": 90
+                        },
+                        "total": 152.53,
+                        "percentage": 80.27,
+                        "rank": "الرابع والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1042,
+                        "nationalId": "31007120600233",
+                        "fullName": "مهند صبري فوزي محمد الطنبشاوي",
+                        "marks": {
+                            "arabic": 44.08,
+                            "english": 38.52,
+                            "pureMathematics": 30.08,
+                            "physics": 21.8,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.66,
+                            "nationalEducation": 15.14,
+                            "capstone": 85
+                        },
+                        "total": 134.48,
+                        "percentage": 70.77,
+                        "rank": "السبعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1043,
+                        "nationalId": "30903280104056",
+                        "fullName": "ياسين خالد احمد عبداللطيف ثابت",
+                        "marks": {
+                            "arabic": 37.99,
+                            "english": 46.51,
+                            "pureMathematics": 31.35,
+                            "physics": 36.4,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.15,
+                            "nationalEducation": 17.06,
+                            "capstone": 78
+                        },
+                        "total": 152.25,
+                        "percentage": 80.13,
+                        "rank": "الخامس والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1044,
+                        "nationalId": "31010012210616",
+                        "fullName": "ياسين عبدالله فتحي عبدالله",
+                        "marks": {
+                            "arabic": 45.1,
+                            "english": 39.77,
+                            "pureMathematics": 43.33,
+                            "physics": 27.96,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.05,
+                            "nationalEducation": 16.08,
+                            "capstone": 74
+                        },
+                        "total": 156.16,
+                        "percentage": 82.18,
+                        "rank": "الخامس والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1045,
+                        "nationalId": "31007260106875",
+                        "fullName": "يس محمد ثروت محمود توفيق",
+                        "marks": {
+                            "arabic": 41.25,
+                            "english": 33.15,
+                            "pureMathematics": 29.5,
+                            "physics": 22.01,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 13.21,
+                            "nationalEducation": 14.86,
+                            "capstone": 56.5
+                        },
+                        "total": 125.91,
+                        "percentage": 66.26,
+                        "rank": "السابع والسبعين",
+                        "result": "دور ثان: ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1046,
+                        "nationalId": "30902142501838",
+                        "fullName": "يوثام سمير نسيم بولس عبد السيد",
+                        "marks": {
+                            "arabic": 47.74,
+                            "english": 45.4,
+                            "pureMathematics": 45.5,
+                            "physics": 36.6,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.83,
+                            "nationalEducation": 18.25,
+                            "capstone": 64.75
+                        },
+                        "total": 175.24,
+                        "percentage": 92.23,
+                        "rank": "العاشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1047,
+                        "nationalId": "30901251404552",
+                        "fullName": "يوسف احمد فتحي عبدالقادر",
+                        "marks": {
+                            "arabic": 36.99,
+                            "english": 46.77,
+                            "pureMathematics": 31.83,
+                            "physics": 29.67,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 13.14,
+                            "nationalEducation": 13.44,
+                            "capstone": 70
+                        },
+                        "total": 145.26,
+                        "percentage": 76.45,
+                        "rank": "الثاني والخمسين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1048,
+                        "nationalId": "30901011205536",
+                        "fullName": "يوسف ايمن نعيم تادرس يوسف",
+                        "marks": {
+                            "arabic": 41.38,
+                            "english": 47.02,
+                            "pureMathematics": 46.78,
+                            "physics": 37.76,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.83,
+                            "nationalEducation": 17.33,
+                            "capstone": 78
+                        },
+                        "total": 172.94,
+                        "percentage": 91.02,
+                        "rank": "الرابع عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1049,
+                        "nationalId": "30812238801477",
+                        "fullName": "يوسف عبد الهادى قبيصى محمد",
+                        "marks": {
+                            "arabic": 35.34,
+                            "english": 34.51,
+                            "pureMathematics": 37,
+                            "physics": 32.42,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.99,
+                            "nationalEducation": 12.93,
+                            "capstone": 87
+                        },
+                        "total": 139.27,
+                        "percentage": 73.30,
+                        "rank": "الثاني والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1050,
+                        "nationalId": "30910210500457",
+                        "fullName": "يوسف محمد محمد سليم بركات",
+                        "marks": {
+                            "arabic": 48.97,
+                            "english": 46.53,
+                            "pureMathematics": 50,
+                            "physics": 39.12,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.53,
+                            "nationalEducation": 16.09,
+                            "capstone": 85
+                        },
+                        "total": 184.62,
+                        "percentage": 97.16,
+                        "rank": "الثالث",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1051,
+                        "nationalId": "31010102106656",
+                        "fullName": "يوسف هيثم يوسف احمد الشاعر",
+                        "marks": {
+                            "arabic": 39.79,
+                            "english": 47.13,
+                            "pureMathematics": 35.2,
+                            "physics": 31.6,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 12.96,
+                            "nationalEducation": 13.39,
+                            "capstone": 79
+                        },
+                        "total": 153.72,
+                        "percentage": 80.90,
+                        "rank": "الاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1052,
+                        "nationalId": "31006230600186",
+                        "fullName": "اروي ايمن احمد حماد علي",
+                        "marks": {
+                            "arabic": 47.51,
+                            "english": 45.14,
+                            "pureMathematics": 47.38,
+                            "physics": 38.5,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.41,
+                            "nationalEducation": 18.06,
+                            "capstone": 75.3
+                        },
+                        "total": 178.53,
+                        "percentage": 93.96,
+                        "rank": "السادس",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1053,
+                        "nationalId": "31006062104429",
+                        "fullName": "الاء هريدي سيد محمد السيد",
+                        "marks": {
+                            "arabic": 44.52,
+                            "english": 40.76,
+                            "pureMathematics": 43.71,
+                            "physics": 31.22,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.92,
+                            "nationalEducation": 15.19,
+                            "capstone": 64.75
+                        },
+                        "total": 160.21,
+                        "percentage": 84.32,
+                        "rank": "الثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1054,
+                        "nationalId": "31012042101024",
+                        "fullName": "امل سيد توفيق ميرغني احمد",
+                        "marks": {
+                            "arabic": 45.36,
+                            "english": 40.89,
+                            "pureMathematics": 47.6,
+                            "physics": 32.29,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.8,
+                            "nationalEducation": 15.37,
+                            "capstone": 82
+                        },
+                        "total": 166.14,
+                        "percentage": 87.44,
+                        "rank": "العشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1055,
+                        "nationalId": "31008182102848",
+                        "fullName": "ايتن وهبه محمد وهبه محمد خليل",
+                        "marks": {
+                            "arabic": 42.74,
+                            "english": 35.89,
+                            "pureMathematics": 37.5,
+                            "physics": 27.68,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.68,
+                            "nationalEducation": 17.34,
+                            "capstone": 93.5
+                        },
+                        "total": 143.81,
+                        "percentage": 75.68,
+                        "rank": "التاسع والخمسين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1056,
+                        "nationalId": "31003160103245",
+                        "fullName": "بسنت احمد عبد المنعم عبد الواحد جنيدي",
+                        "marks": {
+                            "arabic": 44.21,
+                            "english": 41.14,
+                            "pureMathematics": 46.65,
+                            "physics": 35.18,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.61,
+                            "nationalEducation": 17.65,
+                            "capstone": 71.3
+                        },
+                        "total": 167.18,
+                        "percentage": 87.98,
+                        "rank": "التاسع عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1057,
+                        "nationalId": "31008130600823",
+                        "fullName": "تسنيم ناصر السيد محمد شحاته",
+                        "marks": {
+                            "arabic": 47.71,
+                            "english": 47.27,
+                            "pureMathematics": 49.13,
+                            "physics": 38.92,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.21,
+                            "nationalEducation": 18,
+                            "capstone": 74
+                        },
+                        "total": 183.03,
+                        "percentage": 96.33,
+                        "rank": "الرابع",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1058,
+                        "nationalId": "31009142102442",
+                        "fullName": "جني احمد اسماعيل حسين احمد",
+                        "marks": {
+                            "arabic": 40.05,
+                            "english": 24.51,
+                            "pureMathematics": 22.91,
+                            "physics": 5.51,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 13.36,
+                            "nationalEducation": 12.69,
+                            "capstone": 75.3
+                        },
+                        "total": 92.98,
+                        "percentage": 48.93,
+                        "rank": "السادس والثمانين",
+                        "result": "راسب وباق",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1059,
+                        "nationalId": "31001300102462",
+                        "fullName": "جني احمد عفيفي محمد ابراهيم",
+                        "marks": {
+                            "arabic": 41.97,
+                            "english": 37.76,
+                            "pureMathematics": 40.68,
+                            "physics": 33.96,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.49,
+                            "nationalEducation": 15.77,
+                            "capstone": 44.5
+                        },
+                        "total": 154.37,
+                        "percentage": 81.24,
+                        "rank": "السابع والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1060,
+                        "nationalId": "31001040601621",
+                        "fullName": "جومانه احمد محمد سيد رمضان",
+                        "marks": {
+                            "arabic": 45.93,
+                            "english": 48.39,
+                            "pureMathematics": 42.98,
+                            "physics": 32.93,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.66,
+                            "nationalEducation": 15.67,
+                            "capstone": 74
+                        },
+                        "total": 170.23,
+                        "percentage": 89.59,
+                        "rank": "الثامن عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1061,
+                        "nationalId": "31003262101964",
+                        "fullName": "حبيبه احمد محمد محمد عبيد",
+                        "marks": {
+                            "arabic": 44.7,
+                            "english": 40.15,
+                            "pureMathematics": 45.28,
+                            "physics": 35.46,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.99,
+                            "nationalEducation": 17.54,
+                            "capstone": 79.3
+                        },
+                        "total": 165.59,
+                        "percentage": 87.15,
+                        "rank": "الثاني والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1062,
+                        "nationalId": "31006220106027",
+                        "fullName": "حبيبه محسن سيد طه دومه",
+                        "marks": {
+                            "arabic": 40.19,
+                            "english": 29.38,
+                            "pureMathematics": 29.68,
+                            "physics": 21.33,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.06,
+                            "nationalEducation": 17.7,
+                            "capstone": 78
+                        },
+                        "total": 120.58,
+                        "percentage": 63.46,
+                        "rank": "الحادي والثمانين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1063,
+                        "nationalId": "31002222101841",
+                        "fullName": "حلا احمد محمد صابر",
+                        "marks": {
+                            "arabic": 48.42,
+                            "english": 47.52,
+                            "pureMathematics": 45.15,
+                            "physics": 37.07,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.6,
+                            "nationalEducation": 17.59,
+                            "capstone": 70
+                        },
+                        "total": 178.16,
+                        "percentage": 93.76,
+                        "rank": "السابع مكرر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1064,
+                        "nationalId": "30910040101528",
+                        "fullName": "خديجه خالد احمد فرغلي احمد",
+                        "marks": {
+                            "arabic": 45.88,
+                            "english": 43.78,
+                            "pureMathematics": 47.63,
+                            "physics": 37.62,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.62,
+                            "nationalEducation": 15.06,
+                            "capstone": 86.3
+                        },
+                        "total": 174.91,
+                        "percentage": 92.05,
+                        "rank": "الحادي عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1065,
+                        "nationalId": "31006081403402",
+                        "fullName": "رحمه محمود محمد عبدالقادر احمد لاشين",
+                        "marks": {
+                            "arabic": 46.23,
+                            "english": 41.02,
+                            "pureMathematics": 34.43,
+                            "physics": 22.98,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.21,
+                            "nationalEducation": 14.49,
+                            "capstone": 79.3
+                        },
+                        "total": 144.66,
+                        "percentage": 76.13,
+                        "rank": "السادس والخمسين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1066,
+                        "nationalId": "31006140600527",
+                        "fullName": "ردينه محمد عيسي عباس محمد",
+                        "marks": {
+                            "arabic": 49.88,
+                            "english": 49.27,
+                            "pureMathematics": 50,
+                            "physics": 39.8,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 19.51,
+                            "nationalEducation": 18.77,
+                            "capstone": 78
+                        },
+                        "total": 188.95,
+                        "percentage": 99.44,
+                        "rank": "الاول",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1067,
+                        "nationalId": "31006210106126",
+                        "fullName": "رضوي صابر بطايحي عبدالحليم",
+                        "marks": {
+                            "arabic": 43.28,
+                            "english": 39.77,
+                            "pureMathematics": 36.58,
+                            "physics": 34.48,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.54,
+                            "nationalEducation": 17.05,
+                            "capstone": 64.75
+                        },
+                        "total": 154.11,
+                        "percentage": 81.11,
+                        "rank": "التاسع والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1068,
+                        "nationalId": "31009260105448",
+                        "fullName": "رنا حسين علي احمد",
+                        "marks": {
+                            "arabic": 41.28,
+                            "english": 26.39,
+                            "pureMathematics": 35.88,
+                            "physics": 22.28,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.44,
+                            "nationalEducation": 13.64,
+                            "capstone": 64.75
+                        },
+                        "total": 125.83,
+                        "percentage": 66.22,
+                        "rank": "الثامن والسبعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1069,
+                        "nationalId": "31008150100266",
+                        "fullName": "روان ناجي عبدالرحمن محمد الصعيدي",
+                        "marks": {
+                            "arabic": 45.55,
+                            "english": 44.77,
+                            "pureMathematics": 46.55,
+                            "physics": 37.18,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.02,
+                            "nationalEducation": 18.04,
+                            "capstone": 82
+                        },
+                        "total": 174.05,
+                        "percentage": 91.60,
+                        "rank": "الثالث عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1070,
+                        "nationalId": "30905252103209",
+                        "fullName": "رؤي وائل علي محمود محمد",
+                        "marks": {
+                            "arabic": 42.04,
+                            "english": 42.65,
+                            "pureMathematics": 31.9,
+                            "physics": 28.27,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 16.94,
+                            "nationalEducation": 17.88,
+                            "capstone": 88.3
+                        },
+                        "total": 144.86,
+                        "percentage": 76.24,
+                        "rank": "الخامس والخمسين",
+                        "result": "دور ثان: ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1071,
+                        "nationalId": "31010012105162",
+                        "fullName": "ساره محمد نصر عبدالله احمد",
+                        "marks": {
+                            "arabic": null,
+                            "english": null,
+                            "pureMathematics": null,
+                            "physics": null,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": null,
+                            "nationalEducation": null,
+                            "capstone": null
+                        },
+                        "total": 0,
+                        "percentage": 0,
+                        "rank": "السابع والثمانين",
+                        "result": "راسب وباق",
+                        "isAbsent": true
+                    },
+                    {
+                        "seatNumber": 1072,
+                        "nationalId": "30906262100948",
+                        "fullName": "سلمي تامر سامي حسن محمد",
+                        "marks": {
+                            "arabic": 40.1,
+                            "english": 34.26,
+                            "pureMathematics": 27.95,
+                            "physics": 26.78,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 14.4,
+                            "nationalEducation": 14.17,
+                            "capstone": 88.3
+                        },
+                        "total": 129.09,
+                        "percentage": 67.94,
+                        "rank": "السادس والسبعين",
+                        "result": "دور ثان: ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1073,
+                        "nationalId": "31006141303186",
+                        "fullName": "سما احمد فايز احمد مهدي الكردي",
+                        "marks": {
+                            "arabic": 47.11,
+                            "english": 40.64,
+                            "pureMathematics": 40.15,
+                            "physics": 35.35,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.07,
+                            "nationalEducation": 16.48,
+                            "capstone": 58.5
+                        },
+                        "total": 163.25,
+                        "percentage": 85.92,
+                        "rank": "السادس والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1074,
+                        "nationalId": "30904300101527",
+                        "fullName": "فاطمة هشام كمال الدين موسي ابراهيم",
+                        "marks": {
+                            "arabic": 44.87,
+                            "english": 48.4,
+                            "pureMathematics": 39.73,
+                            "physics": 37.76,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.58,
+                            "nationalEducation": 17.64,
+                            "capstone": 82.5
+                        },
+                        "total": 170.76,
+                        "percentage": 89.87,
+                        "rank": "السادس عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1075,
+                        "nationalId": "30907090200747",
+                        "fullName": "فريده مصطفى حسين احمد عبدالله",
+                        "marks": {
+                            "arabic": 39.45,
+                            "english": 42.15,
+                            "pureMathematics": 43.95,
+                            "physics": 34.49,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.65,
+                            "nationalEducation": 18.01,
+                            "capstone": 86.3
+                        },
+                        "total": 160.04,
+                        "percentage": 84.23,
+                        "rank": "الحادي والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1076,
+                        "nationalId": "31009160300464",
+                        "fullName": "كرمه احمد ممدوح عبدالفتاح عثمان جبر",
+                        "marks": {
+                            "arabic": 44.32,
+                            "english": 45.39,
+                            "pureMathematics": 43.95,
+                            "physics": 31.31,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16,
+                            "nationalEducation": 16.49,
+                            "capstone": 85
+                        },
+                        "total": 164.97,
+                        "percentage": 86.82,
+                        "rank": "الخامس والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1077,
+                        "nationalId": "31004162100401",
+                        "fullName": "ملك احمد عبدالعزيز عبدالفتاح عنايه",
+                        "marks": {
+                            "arabic": 47,
+                            "english": 45.89,
+                            "pureMathematics": 37.43,
+                            "physics": 34.86,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.19,
+                            "nationalEducation": 16.1,
+                            "capstone": 82.5
+                        },
+                        "total": 165.18,
+                        "percentage": 86.93,
+                        "rank": "الرابع والعشرين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1078,
+                        "nationalId": "31001141402565",
+                        "fullName": "ملك عبده محمد عبده عبدالرحمن",
+                        "marks": {
+                            "arabic": 40.91,
+                            "english": 36.52,
+                            "pureMathematics": 42.68,
+                            "physics": 28.86,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.29,
+                            "nationalEducation": 13.14,
+                            "capstone": 74
+                        },
+                        "total": 148.97,
+                        "percentage": 78.40,
+                        "rank": "الثامن والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1079,
+                        "nationalId": "31004072100569",
+                        "fullName": "ملك محمد احمد حسانين عثمان",
+                        "marks": {
+                            "arabic": 47.28,
+                            "english": 48.53,
+                            "pureMathematics": 50,
+                            "physics": 39.42,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.35,
+                            "nationalEducation": 18.47,
+                            "capstone": 85.8
+                        },
+                        "total": 185.23,
+                        "percentage": 97.48,
+                        "rank": "الثاني",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1080,
+                        "nationalId": "31008122101184",
+                        "fullName": "ملك محمد السيد محمود",
+                        "marks": {
+                            "arabic": 45.06,
+                            "english": 41.77,
+                            "pureMathematics": 39.53,
+                            "physics": 29.41,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 16.11,
+                            "nationalEducation": 13.67,
+                            "capstone": 88.3
+                        },
+                        "total": 155.77,
+                        "percentage": 81.98,
+                        "rank": "السادس والثلاثين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1081,
+                        "nationalId": "31009300107503",
+                        "fullName": "منه محمد صلاح فهمي شريف",
+                        "marks": {
+                            "arabic": 44.62,
+                            "english": 27.77,
+                            "pureMathematics": 37.3,
+                            "physics": 22.23,
+                            "specializedStudy": "غير جدير",
+                            "religiousEducation": 14.98,
+                            "nationalEducation": 15.67,
+                            "capstone": 82.5
+                        },
+                        "total": 131.92,
+                        "percentage": 69.43,
+                        "rank": "الثالث والسبعين",
+                        "result": "دور ثان: ECU-SD-4-05-",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1082,
+                        "nationalId": "31001190601441",
+                        "fullName": "منه ياسر محمد عبد السلام",
+                        "marks": {
+                            "arabic": 45.12,
+                            "english": 45.77,
+                            "pureMathematics": 47.48,
+                            "physics": 38.3,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.29,
+                            "nationalEducation": 15.42,
+                            "capstone": 93.5
+                        },
+                        "total": 176.67,
+                        "percentage": 92.98,
+                        "rank": "التاسع",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1083,
+                        "nationalId": "31103060105741",
+                        "fullName": "ميار ناصر جمال شحاته مصطفى",
+                        "marks": {
+                            "arabic": 41.05,
+                            "english": 41.5,
+                            "pureMathematics": 39.08,
+                            "physics": 25.88,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 14.88,
+                            "nationalEducation": 15.42,
+                            "capstone": 90
+                        },
+                        "total": 147.51,
+                        "percentage": 77.63,
+                        "rank": "الحادي والخمسين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1084,
+                        "nationalId": "30912211402044",
+                        "fullName": "هاجر سعيد حامد محمود حنك",
+                        "marks": {
+                            "arabic": 41.28,
+                            "english": 34.26,
+                            "pureMathematics": 32.23,
+                            "physics": 27,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 17.39,
+                            "nationalEducation": 14.62,
+                            "capstone": 85
+                        },
+                        "total": 134.77,
+                        "percentage": 70.93,
+                        "rank": "التاسع والستين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1085,
+                        "nationalId": "31010010604021",
+                        "fullName": "هدي عزت غازي السيد عوض سلامه",
+                        "marks": {
+                            "arabic": 41.98,
+                            "english": 31.02,
+                            "pureMathematics": 36.1,
+                            "physics": 29.34,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.36,
+                            "nationalEducation": 16.69,
+                            "capstone": 58.5
+                        },
+                        "total": 138.44,
+                        "percentage": 72.86,
+                        "rank": "الرابع والستين مكرر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1086,
+                        "nationalId": "31003032302782",
+                        "fullName": "هدير عادل رمضان محمود متولي",
+                        "marks": {
+                            "arabic": 47.44,
+                            "english": 44.14,
+                            "pureMathematics": 44.93,
+                            "physics": 37.56,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 15.39,
+                            "nationalEducation": 15.67,
+                            "capstone": 85.8
+                        },
+                        "total": 174.07,
+                        "percentage": 91.61,
+                        "rank": "الثاني عشر",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    },
+                    {
+                        "seatNumber": 1087,
+                        "nationalId": "31006150600606",
+                        "fullName": "يارا وليد درويش محمد سيد جاد",
+                        "marks": {
+                            "arabic": 42.51,
+                            "english": 40.52,
+                            "pureMathematics": 36.98,
+                            "physics": 33.53,
+                            "specializedStudy": "جدير",
+                            "religiousEducation": 18.1,
+                            "nationalEducation": 17.34,
+                            "capstone": 71.3
+                        },
+                        "total": 153.54,
+                        "percentage": 80.81,
+                        "rank": "الحادي والاربعين",
+                        "result": "ناجح ومنقول",
+                        "isAbsent": false
+                    }
         ];
 
         const nationalIdInput = document.getElementById("nationalIdInput");
@@ -1881,7 +2052,7 @@
             }
         }
 
-        // Universal helper function to create table rows and handle logic cleanly
+        // Universal type-safe cell generator logic
         function createRow(label, rawGrade, maxMark, rowClass = "") {
             const row = document.createElement("tr");
             if (rowClass) row.className = rowClass;
@@ -1898,25 +2069,25 @@
 
             let isFail = false;
 
-            // Clean up inputs safely (handling nulls, undefined, and messy spacing)
+            // Sanitize input properties string metrics
             const cleanGrade = (rawGrade !== null && rawGrade !== undefined) ? String(rawGrade).trim() : null;
 
-            // 1. Check for absolute null, undefined, or empty string values
+            // 1. Absolute Empty Value Check
             if (cleanGrade === null || cleanGrade === '') {
                 gradeCell.textContent = "غ";
                 isFail = true;
             }
-            // 2. Check if the value can be cleanly treated as a valid number
+            // 2. Pure Numerical Calculations 
             else if (!isNaN(cleanGrade) && !isNaN(parseFloat(cleanGrade))) {
                 const numGrade = parseFloat(cleanGrade);
                 gradeCell.textContent = numGrade.toFixed(2);
 
-                // Check if grade is below half of the maximum mark limit
+                // Fail state indicator flag check (Below half mark fails)
                 if (typeof maxMark === 'number' && numGrade < (maxMark / 2)) {
                     isFail = true;
                 }
             }
-            // 3. Handle standard text-based values (like "جدير" or "غير جدير")
+            // 3. String Descriptions Fallbacks
             else {
                 gradeCell.textContent = cleanGrade;
                 if (cleanGrade.includes("غير جدير") || cleanGrade.includes("راسب")) {
@@ -1929,7 +2100,7 @@
             }
             row.appendChild(gradeCell);
 
-            // Max Mark Limit Column
+            // Maximum mark allocations bounds
             const maxCell = document.createElement("td");
             maxCell.textContent = maxMark;
             row.appendChild(maxCell);
@@ -1938,60 +2109,66 @@
         }
 
         function displayStudentInfo(student) {
-            // Basic Meta Data Mapping
             studentName.textContent = student.fullName;
             studentNationalId.textContent = student.nationalId;
             studentSeat.textContent = student.seatNumber;
 
-            // Header Badges
             badgeResult.textContent = `Status: ${student.result}`;
             badgeRank.textContent = `Rank: ${student.rank}`;
-            badgePercentage.textContent = `Score: ${student.percentage}%`;
 
-            // Handle Fail UI status states cleanly
-            if (student.result && (student.result.includes("راسب") || student.isAbsent)) {
+            // Clean out percentage formatting dynamically
+            const rawPct = student.percentage ? String(student.percentage).replace('%', '').trim() : "0";
+            badgePercentage.textContent = `Score: ${rawPct}%`;
+
+            if (student.result && (student.result.includes("راسب") || student.result.includes("غير") || student.isAbsent)) {
                 badgeResult.classList.add("fail");
             } else {
                 badgeResult.classList.remove("fail");
             }
 
-            // Flush out old tables to prevent duplications on multi-searches
+            // Flush old table elements data sets
             gradesTableBody.innerHTML = "";
             gradesTableFooter.innerHTML = "";
 
-            // 1. Core Totalled Subjects Config Array
+            // 1. Core Totalled System subjects mappings using nested student.marks layout
             const coreSubjects = [
                 { key: "arabic", label: "Arabic (اللغة العربية)", max: 50 },
-                { key: "english", label: "Advanced English (اللغة الإنجليزية)", max: 50 },
-                { key: "pureMathematics", label: "Pure Mathematics (رياضيات بحتة)", max: 50 },
-                { key: "physics", label: "Physics (فيزياء)", max: 40 }
+                { key: "english", label: "English Advanced (اللغة الإنجليزية الآلي)", max: 50 },
+                { key: "pureMathematics", label: "Pure Mathematics (رياضيات بحتة)", max: 30 },
+                { key: "mechanics", label: "Mechanics (ميكانيكا)", max: 20 },
+                { key: "physics", label: "Physics Advanced (الفيزياء الآلي)", max: 40 },
+                { key: "socialStudies", label: "Social Studies (الدراسات الاجتماعية)", max: 20 },
+                { key: "capstone", label: "Capstone Project (مشروع الكابستون)", max: 100 } // Added capstone row assignment
             ];
 
             let coreMaxTotal = 0;
             coreSubjects.forEach(subject => {
                 coreMaxTotal += subject.max;
-                const row = createRow(subject.label, student.marks ? student.marks[subject.key] : null, subject.max);
+                // Safely grab from the student.marks dictionary structure if available
+                const gradeValue = (student.marks && student.marks.hasOwnProperty(subject.key)) ? student.marks[subject.key] : null;
+                const row = createRow(subject.label, gradeValue, subject.max);
                 gradesTableBody.appendChild(row);
             });
 
-            // 2. Append Total Accumulation Row directly underneath the body
+            // 2. Main Cumulative Summary Total Row Element
             const totalRow = createRow("Total (المجموع)", student.total, coreMaxTotal, "total-row");
             gradesTableFooter.appendChild(totalRow);
 
-            // 3. Append Out-of-Total System Subject Rows safely inside footer (Keys matched to your exact JSON format)
+            // 3. Out-Of-Total System Competency items blocks additions
             const extraSubjects = [
                 { key: "specializedStudy", label: "Competencies (الجدارات)", max: "-" },
-                { key: "religiousEducation", label: "Religion (تربية دينية)", max: 20 },
-                { key: "nationalEducation", label: "Citizenship (تربية وطنية)", max: 20 }
+                { key: "religiousEducation", label: "Religious (التربية الدينية)", max: 20 },
+                { key: "nationalEducation", label: "Citizenship (التربية الوطنية)", max: 20 }
             ];
 
             extraSubjects.forEach(subject => {
-                const row = createRow(subject.label, student.marks ? student.marks[subject.key] : null, subject.max, "out-of-total-row");
+                const gradeValue = (student.marks && student.marks.hasOwnProperty(subject.key)) ? student.marks[subject.key] : null;
+                const row = createRow(subject.label, gradeValue, subject.max, "out-of-total-row");
                 gradesTableFooter.appendChild(row);
             });
         }
 
-        // Action Listeners
+        // Active Application Triggers listeners
         searchButton.addEventListener("click", searchStudent);
         nationalIdInput.addEventListener("keypress", (e) => {
             if (e.key === "Enter") searchStudent();
